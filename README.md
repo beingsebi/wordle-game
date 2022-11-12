@@ -1,5 +1,5 @@
 # Prerequisites
-## compile main1.cpp to main1.exe
+## compile main.cpp to main.exe
 
 ### for linux only
 *    from tools.py

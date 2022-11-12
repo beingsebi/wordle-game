@@ -158,7 +158,7 @@ def press_inf():
 
 
 def press_help_btn():
-    fsys('main1.exe')
+    fsys('main.exe')
     rd = open('write.txt', 'r')
     st = rd.readline()
     tbox.delete('1.0', tk.END)
