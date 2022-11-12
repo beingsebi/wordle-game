@@ -6,8 +6,8 @@ import constants as consts
 
 def init_root():
     root = tk.Tk()
-    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
-        'wordle.1.0')  # icon in taskbar
+    # icon in taskbar
+    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('wordle.1.0')
     root.title('Wordle')
     window_width = 600
     window_height = 450
