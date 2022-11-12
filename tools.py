@@ -6,8 +6,8 @@ import constants as consts
 
 def init_root():
     root = tk.Tk()
-    # icon in taskbar
-    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('wordle.1.0')
+    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+        'wordle.1.0')  # icon in taskbar
     root.title('Wordle')
     window_width = 600
     window_height = 450
@@ -99,20 +99,28 @@ def draw_inf_btn(root):
 
 
 def color_boxes(letters, line, st, ans):
-
+    bif = []
     afis = [0 for _ in range(5)]
     for i in range(5):
-        letters[line][i].config(background=consts.gri)
-
-    for i in range(5):
-        if st[i] in ans:
-            letters[line][i].config(background=consts.galben)
-            afis[i] = 1
-
-    for i in range(5):
-        if st[i] == ans[i]:
+        if ans[i] == st[i]:
+            bif.append(i)
             letters[line][i].config(background=consts.verde)
             afis[i] = 2
+    for i in bif:
+        st = st[:i]+'`'+st[i+1:]
+        ans = ans[:i]+'~'+ans[i+1:]
+    for i in range(5):
+        for j in range(5):
+            if st[i] == ans[j]:
+                ans = ans[:j]+'~'+ans[j+1:]
+                st = st[:i]+'`'+st[i+1:]
+                letters[line][i].config(background=consts.galben)
+                afis[i] = 1
+                break
+
+    for i in range(5):
+        if st[i].isalpha():
+            letters[line][i].config(background=consts.gri)
 
     pipe = open('pipe.txt', 'a')
     for i in afis:

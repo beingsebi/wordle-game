@@ -20,7 +20,6 @@ normal_btn = tools.draw_normal_btn(root)
 hard_btn = tools.draw_hard_btn(root)
 inf_btn = tools.draw_inf_btn(root)
 
-
 line = answer = 0
 dif_limit = 6
 
@@ -35,14 +34,8 @@ def init_game():
     global line, answer
     line = 0
     answer = rand_word(all_words)
-
-    ###################################################
-    # answer = 'CAIET'
-    ##########  your desired existing answer ##########
-    ###################################################
-
+    #answer = 'your desired answer'
     # print(answer)
-
     for i in range(6):
         for j in range(5):
             letters[i][j].config(text='', background=constants.basic)

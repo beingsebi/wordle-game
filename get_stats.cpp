@@ -154,7 +154,6 @@ string prediction()
     }
     return rez;
 }
-ofstream xgx("_stats.txt");
 int solve(string x)
 {
     {
@@ -165,7 +164,6 @@ int solve(string x)
     while (true)
     {
         string s = prediction();
-        xgx << s << " ";
         cnt++;
         if (s == x)
             break;
@@ -189,22 +187,25 @@ int main()
 {
     vector<string> v = get_all_words();
     int sum = 0;
+    ofstream g("stats2.txt");
     for (auto i : v)
     {
-        xgx << i << " ";
         int x = solve(i);
-        xgx << "   -   " << x << '\n';
+        g << i << " " << x << '\n';
         sum += x;
     }
     cout << (double)sum / v.size();
     return 0;
 }
+// (<4)
+// 45935
+// 1 - 1
+// 2 - 53
+// 3 - 2490
+// 4 - 6519
+// 5 - 2082
+// 6 - 291
+// 7 - 18
+// 4.01039 average
 
-// 4.0099528
-// 1 - 1    -> 1
-// 2 - 51   -> 102
-// 3 - 2474 -> 7422
-// 4 - 6557 -> 26228
-// 5 - 2066 -> 10330
-// 6 - 288  -> 1728
-// 7 - 17   -> 119
+// (<3) => 4.02846
