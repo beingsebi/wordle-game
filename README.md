@@ -2,9 +2,9 @@
 ## compile main1.cpp to main1.exe
 
 ### for linux only
-###    from tools.py
-###    comment line 21 (root.iconbitmap('abc.ico'))
-###    comment line 10 (ctypes.windll ... )
+*    from tools.py
+*    comment line 21 (root.iconbitmap('abc.ico'))
+*    comment line 10 (ctypes.windll ... )
 
 
 # Statistics
