@@ -8,8 +8,8 @@
 
 
 # Statistics
-* 11454 dictionary length
-* 4.0099528 average guesses
+* 11454 possible answers
+* 4.0099528 average guesses if played only using the helper
 * 1 guess - 1 word
 * 2 guesses - 51 words
 * 3 guesses - 2474
