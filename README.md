@@ -2,8 +2,7 @@
 * compile main.cpp to main.exe
 * run GAME.py and have fun
 
-### for linux only
-####    from tools.py
+### for linux only, in the tools.py file 
 *    comment line 21 (root.iconbitmap('abc.ico'))
 *    comment line 10 (ctypes.windll ... )
 
