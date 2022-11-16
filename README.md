@@ -1,5 +1,6 @@
 # Prerequisites
-## compile main.cpp to main.exe
+* compile main.cpp to main.exe
+* run GAME.py and have fun
 
 ### for linux only
 *    from tools.py
