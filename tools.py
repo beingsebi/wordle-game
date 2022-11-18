@@ -18,7 +18,7 @@ def init_root():
     root.geometry(f'{window_width}x{window_height}+{center_x}+{center_y}')
     # root.geometry('600x400+250+200')
     root.resizable(False, False)
-    root.iconbitmap('abc.ico')
+    root.iconbitmap('ico.ico')
     return root
 
 
