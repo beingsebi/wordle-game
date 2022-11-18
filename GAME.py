@@ -36,7 +36,7 @@ def init_game():
     answer = rand_word(all_words)
 
     ###################################################
-    answer = 'VODCA'
+    # answer = 'VODCA'
     ##########  your desired EXISTING answer ##########
     ###################################################
     # print(answer)
@@ -160,7 +160,6 @@ def press_help_btn():
     fsys('main.exe')
     rd = open('write.txt', 'r')
     st = rd.readline()
-    print(st)
     tbox.delete('1.0', tk.END)
     tbox.insert(tk.END, st)
     handler_submit()
