@@ -33,26 +33,12 @@ bool check_in(const char &ch, const string &s)
 bool okk(string sx1, pair<string, string> sx2)
 {
     for (const int i : {0, 1, 2, 3, 4})
-        if (sx2.first[i] == '2')
-        {
-            if (sx2.second[i] != sx1[i])
-                return false;
-            sx1[i] = '~';
-            sx2.second[i] = '`';
-        }
+        if (sx2.first[i] == '2' && sx2.second[i] != sx1[i])
+            return false;
+
     for (const int i : {0, 1, 2, 3, 4})
         if (sx2.first[i] == '1' && (sx2.second[i] == sx1[i] || !check_in(sx2.second[i], sx1)))
             return false;
-        else if (sx2.first[i] == '1')
-        {
-            for (const int j : {0, 1, 2, 3, 4})
-                if (sx1[j] == sx2.second[i])
-                {
-                    sx1[j] = '~';
-                    break;
-                }
-            sx2.second[i] = '`';
-        }
     for (const int i : {0, 1, 2, 3, 4})
         if (sx2.first[i] == '0' && check_in(sx2.second[i], sx1))
             return false;
@@ -69,7 +55,7 @@ vector<string> refine_list(const vector<string> &allw)
 {
     vector<string> rez;
     vector<pair<string, string>> t = get_info();
-    if (t.size() == 1)
+    if (t.size() == 1 && t[0].second == "TAREI")
     {
 
         ifstream f("precomputed.txt");
@@ -96,22 +82,15 @@ string encode(string st, string ans)
 {
     string afis = "00000";
     for (const int i : {0, 1, 2, 3, 4})
-        if (ans[i] == st[i])
-        {
-            st[i] = '`';
-            ans[i] = '~';
-            afis[i] = '2';
-        }
-
-    for (const int i : {0, 1, 2, 3, 4})
         for (const int j : {0, 1, 2, 3, 4})
             if (st[i] == ans[j])
             {
-                ans[j] = '~';
-                st[i] = '`';
                 afis[i] = '1';
                 break;
             }
+    for (const int i : {0, 1, 2, 3, 4})
+        if (ans[i] == st[i])
+            afis[i] = '2';
     return afis;
 }
 double entropy(string st, vector<string> pos)
@@ -191,9 +170,9 @@ int main()
     int sum = 0;
     for (auto i : v)
     {
-        xgx << i << " ";
+        xgx << i << " --> ";
         int x = solve(i);
-        xgx << "   -   " << x << '\n';
+        xgx << "  -  " << x << '\n';
         sum += x;
     }
     cout << (double)sum / v.size();

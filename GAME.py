@@ -1,4 +1,3 @@
-import constants
 import tkinter as tk
 from tkinter import messagebox
 import tools
@@ -37,19 +36,19 @@ def init_game():
     answer = rand_word(all_words)
 
     ###################################################
-    # answer = 'CAIET'
-    ##########  your desired existing answer ##########
+    answer = 'VODCA'
+    ##########  your desired EXISTING answer ##########
     ###################################################
-
     # print(answer)
 
     for i in range(6):
         for j in range(5):
-            letters[i][j].config(text='', background=constants.basic)
+            letters[i][j].config(
+                text='', background=tools.constants.get_basic())
     if dif_limit == 3:
         for i in range(3, 6):
             for j in range(5):
-                letters[i][j].config(background=constants.gri)
+                letters[i][j].config(background=tools.constants.get_gri())
 
 
 def handler_submit():
@@ -118,7 +117,7 @@ def press_easy():
     inf_btn.config(relief='solid')
     for i in range(6):
         for j in range(5):
-            letters[i][j].config(background=constants.basic)
+            letters[i][j].config(background=tools.constants.get_basic())
 
 
 def press_normal():
@@ -130,7 +129,7 @@ def press_normal():
     inf_btn.config(relief='solid')
     for i in range(6):
         for j in range(5):
-            letters[i][j].config(background=constants.basic)
+            letters[i][j].config(background=tools.constants.get_basic())
 
 
 def press_hard():
@@ -142,7 +141,7 @@ def press_hard():
     inf_btn.config(relief='solid')
     for i in range(3, 6):
         for j in range(5):
-            letters[i][j].config(background=constants.gri)
+            letters[i][j].config(background=tools.constants.get_gri())
 
 
 def press_inf():
@@ -154,13 +153,14 @@ def press_inf():
     inf_btn.config(relief='flat')
     for i in range(6):
         for j in range(5):
-            letters[i][j].config(background=constants.basic)
+            letters[i][j].config(background=tools.constants.get_basic())
 
 
 def press_help_btn():
     fsys('main.exe')
     rd = open('write.txt', 'r')
     st = rd.readline()
+    print(st)
     tbox.delete('1.0', tk.END)
     tbox.insert(tk.END, st)
     handler_submit()
