@@ -13,9 +13,9 @@
 * 4.0151 average guesses if played only using the helper
 * 1 guess - 1 word
 * 2 guesses - 41 words
-* 3 guesses - 2488
-* 4 guesses - 6520
-* 5 guesses - 2081
-* 6 guesses - 304
-* 7 guesses - 19
+* 3 guesses - 2488 words
+* 4 guesses - 6520 words
+* 5 guesses - 2081 words
+* 6 guesses - 304 words
+* 7 guesses - 19 words
 * more details in _stats.txt
