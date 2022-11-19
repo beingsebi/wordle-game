@@ -41,7 +41,7 @@ int main()
     {
         xgx << i << " --> ";
         int x = solve(i);
-        xgx << "  -  " << x << '\n';
+        xgx << " -  " << x << '\n';
         sum += x;
     }
     cout << (double)sum / v.size();
