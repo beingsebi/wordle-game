@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "cpp_tools.h"
+#include "cpp_tools.hpp"
 using namespace std;
 int main()
 {
