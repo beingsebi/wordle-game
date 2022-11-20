@@ -16,6 +16,7 @@
 * 5 guesses - `2080` words
 * 6 guesses - `291` words
 * 7 guesses - `18` words
+
 ![](tabel.crtx)
 
 # Extra
