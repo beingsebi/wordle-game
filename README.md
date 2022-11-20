@@ -27,6 +27,10 @@ Astfel, aplicația pe care am creat-o dispune de mai multe opțiuni, precum: ale
 
 ![](tabel.crtx)
 
+## Extra
+* cel mai bun răspuns de început (*opener*) este `TAREI`
+* `_stats.txt` (`solutii.txt`) se obține rulând `get_stats.cpp` și descrie secvența de răspunsuri date de *helper* pentru fiecare răspuns posibil
+* `precomputed.txt` se obține rulând `get_precomputed.cpp` și conține al doilea răspuns al *helper-ului* dacă primul răspuns a fost `TAREI`
 ## Prerequisites
 * compile `main.cpp` to `main.exe`
 * run `GAME.py` and have fun
@@ -34,12 +38,6 @@ Astfel, aplicația pe care am creat-o dispune de mai multe opțiuni, precum: ale
 ### for `linux` only, in the `tools.py` file 
 *    comment line `36` (ctypes.windll ... )
 *    comment line `47` (root.iconbitmap('ico.ico'))
-
-
-## Extra
-* the `_stats.txt` (`solutii.txt`) file was obtained by running `get_stats.cpp` and it describes the sequence produced by the helper for any valid answer
-* the `precomputed.txt` file was obtained by running get_precomputed.cpp and it is used to store the second guesses if the first guess was TAREI 
-
 
 ## Referințe:
 * [https://en.wikipedia.org/wiki/Wordle](https://en.wikipedia.org/wiki/Wordle)
