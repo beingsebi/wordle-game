@@ -36,7 +36,7 @@ def init_game():
     answer = rand_word(all_words)
 
     ###################################################
-    # answer = 'CAIET'
+    # answer = 'VOLTI'
     ##########  your desired EXISTING answer ##########
     ###################################################
     # print(answer)
