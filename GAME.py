@@ -1,4 +1,3 @@
-import constants
 import tkinter as tk
 from tkinter import messagebox
 import tools
@@ -20,6 +19,7 @@ normal_btn = tools.draw_normal_btn(root)
 hard_btn = tools.draw_hard_btn(root)
 inf_btn = tools.draw_inf_btn(root)
 
+
 line = answer = 0
 dif_limit = 6
 
@@ -34,15 +34,21 @@ def init_game():
     global line, answer
     line = 0
     answer = rand_word(all_words)
-    #answer = 'your desired answer'
+
+    ###################################################
+    # answer = 'CAIET'
+    ##########  your desired EXISTING answer ##########
+    ###################################################
     # print(answer)
+
     for i in range(6):
         for j in range(5):
-            letters[i][j].config(text='', background=constants.basic)
+            letters[i][j].config(
+                text='', background=tools.constants.get_basic())
     if dif_limit == 3:
         for i in range(3, 6):
             for j in range(5):
-                letters[i][j].config(background=constants.gri)
+                letters[i][j].config(background=tools.constants.get_gri())
 
 
 def handler_submit():
@@ -111,7 +117,7 @@ def press_easy():
     inf_btn.config(relief='solid')
     for i in range(6):
         for j in range(5):
-            letters[i][j].config(background=constants.basic)
+            letters[i][j].config(background=tools.constants.get_basic())
 
 
 def press_normal():
@@ -123,7 +129,7 @@ def press_normal():
     inf_btn.config(relief='solid')
     for i in range(6):
         for j in range(5):
-            letters[i][j].config(background=constants.basic)
+            letters[i][j].config(background=tools.constants.get_basic())
 
 
 def press_hard():
@@ -135,7 +141,7 @@ def press_hard():
     inf_btn.config(relief='solid')
     for i in range(3, 6):
         for j in range(5):
-            letters[i][j].config(background=constants.gri)
+            letters[i][j].config(background=tools.constants.get_gri())
 
 
 def press_inf():
@@ -147,7 +153,7 @@ def press_inf():
     inf_btn.config(relief='flat')
     for i in range(6):
         for j in range(5):
-            letters[i][j].config(background=constants.basic)
+            letters[i][j].config(background=tools.constants.get_basic())
 
 
 def press_help_btn():
