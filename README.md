@@ -16,8 +16,9 @@
 * 5 guesses - `2080` words
 * 6 guesses - `291` words
 * 7 guesses - `18` words
-* more details in `_stats.txt`
+![](tabel.crtx)
 
 # Extra
+* best opener is `TAREI`
 * the `_stats.txt` file was obtained by running `get_stats.cpp` and it describes the sequence produced by the helper for any valid answer
-* the `precomputed.txt` file was obtained by running get_precomputed.cpp and it is used to store the second guesses if the first guess was TAREI 
+* the `precomputed.txt` file was obtained by running `get_precomputed.cpp` and it is used to store the second guesses if the first guess was `TAREI`
