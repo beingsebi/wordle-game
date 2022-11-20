@@ -20,16 +20,22 @@ vector<string> allw;
 string this_prediction()
 {
     vector<string> rfnd = this_refine_list(allw);
+    vector<pair<string, string>> axp = get_info();
     if (rfnd.size() == 0)
+    {
+        cout << axp[0].first << " IMPOSIBIL" << endl;
         return "X";
+    }
     if (rfnd.size() < 4)
     {
-        cout << "WON'T GET HERE\n";
+        cout << axp[0].first << " : ";
+        for (auto i : rfnd)
+            cout << i << " ";
+        cout << '\n';
         return rfnd[0];
     }
     string rez;
     double maxim = -1, ent;
-    vector<pair<string, string>> axp = get_info();
     for (const string &i : allw)
     {
         ent = entropy(i, rfnd);
@@ -64,7 +70,7 @@ int main()
                         string ax = this_prediction();
                         if (ax.size() == 5)
                             gp << s << " " << ax << '\n', gp.flush();
-                        cout << s << endl;
+                        cout << s << ' ' << ax << endl;
                     }
     return 0;
 }
