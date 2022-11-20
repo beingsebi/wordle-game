@@ -1,10 +1,10 @@
 # Prerequisites
-* compile main.cpp to main.exe
-* run GAME.py and have fun
+* compile `main.cpp` to `main.exe`
+* run `GAME.py` and have fun
 
-### for linux only, in the tools.py file 
-*    comment line 36 (ctypes.windll ... )
-*    comment line 47 (root.iconbitmap('ico.ico'))
+### for linux only, in the `tools.py` file 
+*    comment line `36` (ctypes.windll ... )
+*    comment line `47` (root.iconbitmap('ico.ico'))
 
 # Statistics
 * 11454 possible answers
